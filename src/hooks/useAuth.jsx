@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
 import Keycloak from "keycloak-js";
+import { useEffect, useRef, useState } from "react";
 
 
 const useAuth = () => {
@@ -9,7 +9,7 @@ const useAuth = () => {
 
     useEffect(() => {
         const client = new Keycloak({
-            url: "http://127.0.0.1:4000",
+            url: "http://127.0.0.1:8080",
             realm: 'myrealm',
             clientId: 'myclient',
         });
